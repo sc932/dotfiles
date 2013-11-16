@@ -1,0 +1,20 @@
+(dp1
+Vancestors |= set('jozo')
+p2
+I135
+sV(lambda x: x)(1)
+p3
+I344
+sVsum([1,2,3])
+p4
+I166
+sVprint(';'.join(__IP.Completer.all_completions('m.'))) #PYTHON-MODE SILENT
+p5
+I80
+sVquery_string
+p6
+I268
+sVq=set()
+p7
+I431
+s.

@@ -1,0 +1,14 @@
+(dp1
+Vreload query_lm.backend.cpp_wrapper
+p2
+I1055
+sVcat /tmp/lm_repos/repos_config.yaml
+p3
+I982
+sVprefix="xxcx"
+p4
+I966
+sVprint(';'.join(__IP.Completer.all_completions('yaml.YAMLError'))) #PYTHON-MODE SILENT
+p5
+I920
+s.

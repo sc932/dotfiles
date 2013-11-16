@@ -1,0 +1,20 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('os.EX_CAN'))) #PYTHON-MODE SILENT
+p2
+I33
+sVmrse = batch.query_to_category.mr_compute_q2c_lm_data.MRSearchSessionExtractor(args=['-q', '/nail/home/msaric/log4-00000.gz'])
+p3
+I118
+sV''.join(a)
+p4
+I805
+sVdict([('a',2),('b',3)])
+p5
+I327
+sVexecfile(r'/tmp/ipython-10862i1q.py') # PYTHON-MODE
+p6
+I352
+sVyelp.stubs.QueryLM().log_probs('specialty eye care', 15)()
+p7
+I191
+s.

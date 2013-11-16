@@ -1,0 +1,11 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('util.'))) #PYTHON-MODE SILENT
+p2
+I84
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.h'))) #PYTHON-MODE SILENT
+p3
+I739
+sVls query_lm/dataload
+p4
+I859
+s.

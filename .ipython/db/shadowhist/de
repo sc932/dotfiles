@@ -1,0 +1,29 @@
+(dp1
+Vexecfile(r'/tmp/ipython-522882VE.py') # PYTHON-MODE
+p2
+I57
+sVhelp(conf2.repo_dir_prefix)
+p3
+I989
+sVbackend.get_probs("specialty eye care")[:5]
+p4
+I151
+sVsys.getsizeof(x)
+p5
+I957
+sVcats['de'].keys()
+p6
+I678
+sVtornado.version
+p7
+I1077
+sVmath.exp(-1)
+p8
+I163
+sVimport yelp.search.query_lm
+p9
+I1267
+sVyelp.stubs.QueryLM().distribution('es', 'clase de tenis', limit=5)()
+p10
+I1128
+s.

@@ -1,0 +1,17 @@
+(dp1
+Vexecfile(r'/tmp/ipython-10862cVa.py') # PYTHON-MODE
+p2
+I518
+sVls  /tmp/mirkotron
+p3
+I1034
+sVset.intersect(['a'],['b'])
+p4
+I422
+sVprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_compute_q2c_lm_data.MRS'))) #PYTHON-MODE SILENT
+p5
+I102
+sVgetattr(d,'language')
+p6
+I946
+s.

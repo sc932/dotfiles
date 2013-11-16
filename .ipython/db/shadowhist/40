@@ -1,0 +1,14 @@
+(dp1
+Vmap(lambda p: p[1], alias_to_root_list)
+p2
+I389
+sVls /nail/scratch/msaric/queries/category-yoga/lang-en/
+p3
+I862
+sVprint(';'.join(__IP.Completer.all_completions('bac'))) #PYTHON-MODE SILENT
+p4
+I1297
+sVquery_lm.distribution('en', 'moss removal', limit=5)()
+p5
+I1182
+s.

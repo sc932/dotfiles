@@ -1,0 +1,11 @@
+(dp1
+Vq[q.find(' ')+1:]
+p2
+I1242
+sValias_to_root_list = map(lambda entry: (entry[0], category_maps.root_map_by_alias[entry[0]]))
+p3
+I321
+sVcat /tmp/mirkotron repos_config.yaml
+p4
+I1036
+s.

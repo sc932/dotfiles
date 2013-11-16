@@ -1,0 +1,23 @@
+(dp1
+Vqlm_res
+p2
+I1278
+sVprint(';'.join(__IP.Completer.all_completions('yelp.configure.config'))) #PYTHON-MODE SILENT
+p3
+I1166
+sVconf2.ready
+p4
+I987
+sVa = 'adasd'
+p5
+I1066
+sVimport lang_repo
+p6
+I793
+sVexecfile(r'/tmp/ipython-4298UID.py') # PYTHON-MODE
+p7
+I612
+sVq2c_dict[category_id] = {"name_clks": 10, "nonname_clks": 10, "ctr": ctr}
+p8
+I257
+s.

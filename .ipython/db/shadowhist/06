@@ -1,0 +1,14 @@
+(dp1
+Vlist(line.split('[[')[1].split(']')[:-2])[0]
+p2
+I1363
+sVyelp.stubs.QueryLM().log_probs('specialty eye care', 5)()
+p3
+I190
+sVprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_compute_q2c_lm_data.'))) #PYTHON-MODE SILENT
+p4
+I100
+sVexecfile(r'/tmp/ipython-383978LB.py') # PYTHON-MODE
+p5
+I1231
+s.

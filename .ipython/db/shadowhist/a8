@@ -1,0 +1,31 @@
+(dp1
+Vexecfile(r'/tmp/ipython-10862D0s.py') # PYTHON-MODE
+p2
+I519
+sVsum((location_array - numpy.array([1000, 1000]))**2) < 100**2
+p3
+I1494
+sV)
+I378
+sValiases=set(alias_list)
+p4
+I429
+sV# Run this first in your main().
+p5
+I1183
+sVprint(';'.join(__IP.Completer.all_completions('yelp.util.validate.Ye'))) #PYTHON-MODE SILENT
+p6
+I69
+sVq += 'a'
+p7
+I435
+sVyelp.stubs.QueryLM().distribution('en', 'pizza', limit=5)()
+p8
+I1140
+sVfrom dataload.lang_repo import countfile_count_queries
+p9
+I854
+sVsorted(q2c_dict.iteritems())
+p10
+I299
+s.

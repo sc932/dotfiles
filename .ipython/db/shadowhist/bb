@@ -1,0 +1,26 @@
+(dp1
+Va['lucy_queries'][0]
+p2
+I1334
+sVexecfile(r'/tmp/ipython-18020A_0.py') # PYTHON-MODE
+p3
+I523
+sVprint(';'.join(__IP.Completer.all_completions('l.pr'))) #PYTHON-MODE SILENT
+p4
+I53
+sVfuture = yelp.stubs.QueryLM().query('specialty eye care', 5)
+p5
+I169
+sVb.distribution('it', 'zulu', gamma1=0.1, gamma2=1)
+p6
+I1062
+sV(location_array - numpy.array([1000, 1000]))**2 < 100**2
+p7
+I1493
+sVmap(lambda x: list(x[1], alias_to_root_list))
+p8
+I407
+sVdataloaders.Q2CHackathonMRJobDataloader
+p9
+I746
+s.

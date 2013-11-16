@@ -1,0 +1,35 @@
+(dp1
+Vmake_cluster('shopping', aliases, cat_graph)
+p2
+I572
+sVexecfile(r'/tmp/ipython-10862pYs.py') # PYTHON-MODE
+p3
+I516
+sVfrom query_lm.dataload.lang_repo import countfile_count_queries
+p4
+I860
+sVlocation_array - numpy.array([1000, 1000])
+p5
+I1491
+sVprint(';'.join(__IP.Completer.all_completions('.mar'))) #PYTHON-MODE SILENT
+p6
+I689
+sVlang_to_cats=find_categories(prefix, set(['de']))
+p7
+I653
+sVprint(';'.join(__IP.Completer.all_completions('batch.que'))) #PYTHON-MODE SILENT
+p8
+I114
+sVlog_posterior = q_lm_dict['log_prior'] + q_lm_dict['log_prob']
+p9
+I251
+sVz.append(['jozo'])
+p10
+I582
+sVprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_'))) #PYTHON-MODE SILENT
+p11
+I116
+sVQ2CPrepareDataload(['-q', 'list', 'stats', 'it']).run()
+p12
+I850
+s.

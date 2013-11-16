@@ -1,0 +1,20 @@
+(dp1
+Vls /tmp/
+p2
+I976
+sVyelp.stubs.QueryLM().distribution('de', 'schnitzel', limit=5)()
+p3
+I1137
+sVimport geogrid
+p4
+I1411
+sVbad_impressions_by_category.keys()
+p5
+I1465
+sVancestors.update(['jozo'])
+p6
+I136
+sVb.distribution('it', 'ristorante', gamma1=0.1, gamma2=1)
+p7
+I1061
+s.

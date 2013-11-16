@@ -1,0 +1,17 @@
+(dp1
+Vq2c_dict={}
+p2
+I248
+sVyelp.stubs.QueryLM().distribution('en', 'argentinian dance classes', limit=5)()
+p3
+I1127
+sV?time.localtime
+p4
+I1026
+sVfor x in xrange(0, 3):
+p5
+I443
+sVpopularity['a']+=1
+p6
+I411
+s.

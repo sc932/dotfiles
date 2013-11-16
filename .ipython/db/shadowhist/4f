@@ -1,0 +1,14 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('repo'))) #PYTHON-MODE SILENT
+p2
+I981
+sVyelp.stubs.QueryLM().suggest('croatian american cultural center & spa', 5)
+p3
+I242
+sVYelpEmail
+p4
+I64
+sVexecfile(r'/tmp/ipython-18020NXj.py') # PYTHON-MODE
+p5
+I530
+s.

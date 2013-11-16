@@ -1,0 +1,20 @@
+(dp1
+Vimport irstlm_config
+p2
+I606
+sV%quit
+p3
+I140
+sVprint(';'.join(__IP.Completer.all_completions('yaml.YA'))) #PYTHON-MODE SILENT
+p4
+I917
+sVexecfile(r'/tmp/ipython-10862Lrn.py') # PYTHON-MODE
+p5
+I450
+sVyelp.stubs.QueryLM().distribution('en', 'moss removal')()
+p6
+I1134
+sVimport dataloaders
+p7
+I734
+s.

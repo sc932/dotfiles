@@ -1,0 +1,17 @@
+(dp1
+Vmain_object=Q2CPrepareDataload([])
+p2
+I842
+sVprint(';'.join(__IP.Completer.all_completions('itrepo.margi'))) #PYTHON-MODE SILENT
+p3
+I881
+sVline.split('[[')[0].split("]]")[1].split("[")[1][:-2]
+p4
+I1441
+sVprint(';'.join(__IP.Completer.all_completions('bso'))) #PYTHON-MODE SILENT
+p5
+I218
+sVset.union(set('a'), set('b'))
+p6
+I392
+s.

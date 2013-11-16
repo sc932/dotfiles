@@ -1,0 +1,14 @@
+(dp1
+Vpkg_resources.get_distribution("Cython").version
+p2
+I1508
+sVdi
+p3
+I297
+sVprint(';'.join(__IP.Completer.all_completions('l.'))) #PYTHON-MODE SILENT
+p4
+I52
+sVs = yelp.stubs.QueryLM()
+p5
+I1276
+s.

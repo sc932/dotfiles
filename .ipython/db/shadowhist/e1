@@ -1,0 +1,17 @@
+(dp1
+Visinstance(a, string)
+p2
+I254
+sV(location_array - numpy.array([1000, 1000]))**2
+p3
+I1492
+sVisinstance(a, datetime.datetime)
+p4
+I75
+sV0.55*6253.5/(0.15*21359.66666)
+p5
+I213
+sVnow = datetime.date.today()
+p6
+I34
+s.

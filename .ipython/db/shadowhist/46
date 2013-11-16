@@ -1,0 +1,23 @@
+(dp1
+Vtime.time()
+p2
+I1030
+sVstr = "{'832': {'is_leaf': False, 'name_clks': 0, 'nonname_clks': 3679, 'ctr': 0.32868757259001163}, '786': {'is_leaf': True, 'name_clks': 0, 'nonname_clks': 1219, 'ctr': 0.10890735280979183}, '783': {'is_leaf': True, 'name_clks': 0, 'nonname_clks': 864, 'ctr': 0.077191101581345484}, '942': {'is_leaf': False, 'name_clks': 0, 'nonname_clks': 1709, 'ctr': 0.15268471366032341}, '969': {'is_leaf': False, 'name_clks': 0, 'nonname_clks': 5886, 'ctr': 0.52586437952291609}, '871': {'is_leaf': True, 'name_clks': 0, 'nonname_clks': 1871, 'ctr': 0.1671580452068257}, '923': {'is_leaf': False, 'name_clks': 0, 'nonname_clks': 9942, 'ctr': 0.88823371750201019}, '913': {'is_leaf': True, 'name_clks': 0, 'nonname_clks': 9072, 'ctr': 0.81050656660412757}}"
+p3
+I280
+sVmrse = batch.query_to_category.mr_compute_q2c_lm_data.MRSearchSessionExtractor(args=['-q', '/nail/home/msaric/search_session_log/2012/10/01/part-00099.gz'])
+p4
+I120
+sVexecfile(r'/tmp/ipython-32398CEm.py') # PYTHON-MODE
+p5
+I600
+sVfrom yelp.logic import dbobjs
+p6
+I264
+sVlen(line.split('[['))
+p7
+I1448
+sVimport this
+p8
+I679
+s.

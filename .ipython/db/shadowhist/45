@@ -1,0 +1,26 @@
+(dp1
+Vyelp.stubs.QueryLM().distribution('en', 'margaritas', gamma1=0, limit=5)()
+p2
+I1148
+sV# Query for a distribution. The extra () is to execute
+p3
+I1187
+sVprint(';'.join(__IP.Completer.all_completions('yelp.stubs.QueryLM'))) #PYTHON-MODE SILENT
+p4
+I176
+sVad_info = impression_recovery.get_ad_info(line)
+p5
+I1400
+sVexecfile(r'/tmp/ipython-4298JAL.py') # PYTHON-MODE
+p6
+I640
+sVstub = yelp.stubs.QueryLM()
+p7
+I1115
+sVb.load()
+p8
+I1043
+sVtime.time
+p9
+I1250
+s.

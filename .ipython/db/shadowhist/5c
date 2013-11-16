@@ -1,0 +1,14 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('category_maps.anc'))) #PYTHON-MODE SILENT
+p2
+I124
+sVprint(';'.join(__IP.Completer.all_completions('util.vali'))) #PYTHON-MODE SILENT
+p3
+I85
+sVexecfile(r'/tmp/ipython-94292ZVv.py') # PYTHON-MODE
+p4
+I270
+sVz.append('a','b','c')
+p5
+I585
+s.

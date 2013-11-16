@@ -1,0 +1,17 @@
+(dp1
+Vls /tmp/lm_repos
+p2
+I975
+sVconf.create_lang_repo("en")
+p3
+I1014
+sVprint(';'.join(__IP.Completer.all_completions('polish.'))) #PYTHON-MODE SILENT
+p4
+I723
+sVline = '[4, 12, [-118.24641881958932, 34.041479913335429], ["seafoodmarkets"]]  [[2990948, "seafoodmarkets", [-118.4836988, 34.235606900000001], 0], [2990948, "seafoodmarkets", [-118.4836988, 34.235606900000001], 0]]'
+p5
+I1367
+sVexecfile(r'/tmp/ipython-118889YK.py') # PYTHON-MODE
+p6
+I831
+s.

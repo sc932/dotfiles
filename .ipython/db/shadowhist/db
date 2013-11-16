@@ -1,0 +1,20 @@
+(dp1
+Vexecfile(r'/tmp/ipython-9158KvB.py') # PYTHON-MODE
+p2
+I1312
+sVdi = q2c_dict.iteritems()
+p3
+I290
+sVprint(';'.join(__IP.Completer.all_completions('qstub.htt'))) #PYTHON-MODE SILENT
+p4
+I183
+sVprint(';'.join(__IP.Completer.all_completions('sys.get'))) #PYTHON-MODE SILENT
+p5
+I952
+sVqs('cats and puppies')
+p6
+I1213
+sVfake.query_ball_point(numpy.array([0,0], 1)
+p7
+I1419
+s.

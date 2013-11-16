@@ -1,0 +1,32 @@
+(dp1
+Vcat_is_higher('partysupplies', 'eventplanning')
+p2
+I357
+sVprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.MRSea'))) #PYTHON-MODE SILENT
+p3
+I115
+sVhelp(q2c_dict.iteritems)
+p4
+I288
+sVprint(';'.join(__IP.Completer.all_completions('mrjob.pro'))) #PYTHON-MODE SILENT
+p5
+I39
+sVq.distribution('en', 'speciality eye care')
+p6
+I1260
+sVprint(';'.join(__IP.Completer.all_completions('sys.getsizeof'))) #PYTHON-MODE SILENT
+p7
+I953
+sVexecfile(r'/tmp/ipython-9158wTB.py') # PYTHON-MODE
+p8
+I1309
+sVenumerate([4,5,6])[0]
+p9
+I1225
+sVnot set(['a']]) & set(['b'])
+p10
+I561
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.'))) #PYTHON-MODE SILENT
+p11
+I736
+s.

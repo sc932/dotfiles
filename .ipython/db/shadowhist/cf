@@ -1,0 +1,26 @@
+(dp1
+V?time.time
+p2
+I1028
+sVprint(';'.join(__IP.Completer.all_completions('d.'))) #PYTHON-MODE SILENT
+p3
+I784
+sVfind_categories('/nail/scratch/msaric/queries')
+p4
+I645
+sVbad_impressions_by_category['822']
+p5
+I1468
+sVreload(base)
+p6
+I871
+sVexecfile(r'/tmp/ipython-9158jCH.py') # PYTHON-MODE
+p7
+I1308
+sVitrepo.marginal_catinfo.countfile
+p8
+I888
+sVmr_printq
+p9
+I1338
+s.

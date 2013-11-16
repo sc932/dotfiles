@@ -1,0 +1,17 @@
+(dp1
+Vexcept ImportError:
+p2
+I1
+sVscipy.__version__
+p3
+I1510
+sVq |= 'a'
+p4
+I476
+sVexecfile(r'/tmp/ipython-18020b3M.py') # PYTHON-MODE
+p5
+I554
+sVprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_compute_q2c_lm_data.MRCo'))) #PYTHON-MODE SILENT
+p6
+I142
+s.

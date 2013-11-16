@@ -1,0 +1,20 @@
+(dp1
+Vexecfile(r'/tmp/ipython-61241GmJ.py') # PYTHON-MODE
+p2
+I227
+sVhelp(q2c_dict.iteritems())
+p3
+I289
+sVexecfile(r'/tmp/ipython-5538tKu.py') # PYTHON-MODE
+p4
+I717
+sVfile_name, bad_impressions_by_category, bad_impressions_by_id = read_file("/scratch/sclark/opportunity_stream/all_opps_stream_03152013.head")
+p5
+I1479
+sV?math.log
+p6
+I1038
+sVchildren_dict=dict()
+p7
+I480
+s.

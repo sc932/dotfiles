@@ -1,0 +1,11 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('voi'))) #PYTHON-MODE SILENT
+p2
+I147
+sVexecfile(r'/tmp/ipython-18020a2F.py') # PYTHON-MODE
+p3
+I549
+sVline.split('[')[1].split(', ')
+p4
+I1396
+s.

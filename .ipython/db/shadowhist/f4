@@ -1,0 +1,14 @@
+(dp1
+Vdouble(3)
+p2
+I949
+sVline.split('[[')[1].split(']')[:-2]
+p3
+I1361
+sVexecfile(r'/tmp/ipython-32000l0k.py') # PYTHON-MODE
+p4
+I598
+sVlm.distribution("en", "very sweet stuff")
+p5
+I1091
+s.

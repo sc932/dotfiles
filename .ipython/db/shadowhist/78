@@ -1,0 +1,38 @@
+(dp1
+Vconf2.ready = True
+p2
+I1003
+sVmain_object=Q2CPrepareDataload()
+p3
+I840
+sVexecfile(r'/tmp/ipython-18020AbF.py') # PYTHON-MODE
+p4
+I544
+sVyelp.stubs.QueryLM().log_probs('specialty eye care', 5).future()
+p5
+I188
+sVa=[0]*20
+p6
+I1252
+sVls /nail/scratch/msaric/queries/category-bars/lang-*/
+p7
+I641
+sVyelp.stubs.QueryLM().distribution('en', 'moss removal', gamma1=1, gamma2=1, limit=5)()
+p8
+I1132
+sVmin(2,1)
+p9
+I247
+sVprint(';'.join(__IP.Completer.all_completions('yaml.YAMLE'))) #PYTHON-MODE SILENT
+p10
+I919
+sVprint(';'.join(__IP.Completer.all_completions('0'))) #PYTHON-MODE SILENT
+p11
+I219
+sVjson_
+p12
+I13
+sVsorted(q2c_dict, cmp=lambda x,y: x < y)
+p13
+I284
+s.

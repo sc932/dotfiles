@@ -1,0 +1,14 @@
+(dp1
+Vls /nail/scratch/msaric/lm_data/stats/
+p2
+I1235
+sVb = lm_backend.LMBackend()
+p3
+I1042
+sV"b")
+p4
+I802
+sVprint(';'.join(__IP.Completer.all_completions('Load'))) #PYTHON-MODE SILENT
+p5
+I24
+s.

@@ -1,0 +1,14 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('mrse.r'))) #PYTHON-MODE SILENT
+p2
+I108
+sVd=dict()
+p3
+I397
+sVresults_to_ctr_shift_log_prob(qlm_res)
+p4
+I1280
+sVq=[2,3]
+p5
+I816
+s.

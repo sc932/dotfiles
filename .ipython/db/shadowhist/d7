@@ -1,0 +1,17 @@
+(dp1
+Vexecfile(r'/tmp/ipython-18020o6e.py') # PYTHON-MODE
+p2
+I553
+sVprint(';'.join(__IP.Completer.all_completions('os.__seta'))) #PYTHON-MODE SILENT
+p3
+I41
+sValias_to_q2c_dict.keys()
+p4
+I320
+sVsorted(q2c_dict.iteritems(), key=lambda x: x[1]['ctr'], reverse=true)
+p5
+I303
+sVclique
+p6
+I367
+s.

@@ -1,0 +1,14 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('g.'))) #PYTHON-MODE SILENT
+p2
+I543
+sVprint(';'.join(__IP.Completer.all_completions('alia'))) #PYTHON-MODE SILENT
+p3
+I334
+sVcats['de']
+p4
+I684
+sVb.distribution('en', 'specialty eye care')
+p5
+I1051
+s.

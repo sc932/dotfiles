@@ -1,0 +1,32 @@
+(dp1
+Vls ~/log-opt
+p2
+I222
+sVimport dict
+p3
+I293
+sVfrom query_lm.backend import lm_backend; b = lm_backend.LMBackend()
+p4
+I1050
+sVa.distribution('en', 'good ice cream', limit=5)()
+p5
+I1179
+sVprint(';'.join(__IP.Completer.all_completions('os.'))) #PYTHON-MODE SILENT
+p6
+I28
+sVexecfile(r'/tmp/ipython-3839793r.py') # PYTHON-MODE
+p7
+I1230
+sValias_to_descendants['flowers']
+p8
+I496
+sVexecfile(r'/tmp/ipython-10862xkD.py') # PYTHON-MODE
+p9
+I466
+sVexecfile(r'/tmp/ipython-38397jjf.py') # PYTHON-MODE
+p10
+I1229
+sVb.distribution('en', 'specialty eye care', 1, 1)
+p11
+I1048
+s.

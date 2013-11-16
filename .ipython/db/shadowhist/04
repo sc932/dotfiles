@@ -1,0 +1,26 @@
+(dp1
+Vrange(0, 3)
+p2
+I446
+sVls /tmp/mirkotron
+p3
+I1007
+sVexecfile(r'/tmp/ipython-18020NeX.py') # PYTHON-MODE
+p4
+I537
+sVexecfile(r'/tmp/ipython-1086212H.py') # PYTHON-MODE
+p5
+I517
+sVprint geogrid.geom.item_inside_lng_lat_radius.__doc__
+p6
+I1413
+sVg.par_reach['costumes']
+p7
+I539
+sVq=dataloaders.Q2CHackathonMRJobDataloader()
+p8
+I751
+sVexecfile(r'/tmp/ipython-32000ltw.py') # PYTHON-MODE
+p9
+I597
+s.

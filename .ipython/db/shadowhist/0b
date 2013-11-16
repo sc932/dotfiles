@@ -1,0 +1,32 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_compute_q2c_lm_data.MRSearchSessionEx'))) #PYTHON-MODE SILENT
+p2
+I105
+sVprint(';'.join(__IP.Completer.all_completions('engl.al'))) #PYTHON-MODE SILENT
+p3
+I714
+sVmr_printq = MRQueryLMPrintQ()
+p4
+I1337
+sV(lambda x,_: x)(1,2)
+p5
+I348
+sVyelp.stubs.QueryLM().log_probs('abortion clinics', 5)()
+p6
+I211
+sVfrom query_lm.backend import backend
+p7
+I156
+sVprint(';'.join(__IP.Completer.all_completions('conf2.'))) #PYTHON-MODE SILENT
+p8
+I986
+sVmake_depth_chart(roots, aliases, cat_graph)
+p9
+I591
+sVexecfile(r'/tmp/ipython-94292y9Q.py') # PYTHON-MODE
+p10
+I274
+sVad_info = line.split('[[')[1].split("]]")[0].split("], [")
+p11
+I1431
+s.

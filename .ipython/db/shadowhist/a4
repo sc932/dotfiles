@@ -1,0 +1,11 @@
+(dp1
+Vglob.glob('/nail/scratch/msaric/queries/category-*')
+p2
+I614
+sVreload 'query_lm.dataload.lang_repo'
+p3
+I868
+sVcats=q.find_categories('/nail/scratch/msaric/queries', ['en','de'])
+p4
+I755
+s.

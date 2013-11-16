@@ -1,0 +1,20 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('cate'))) #PYTHON-MODE SILENT
+p2
+I122
+sVconf2.repo_dir_prefix("en")
+p3
+I993
+sVfrom yelp.bootstrapped.category_yelp import category_maps
+p4
+I249
+sVprint(';'.join(__IP.Completer.all_completions('alias_to_r'))) #PYTHON-MODE SILENT
+p5
+I336
+sV__pyfile = open('''/tmp/psss-temp.py''');exec(compile(__pyfile.read(), '''/sftp:msaric@dev24:/tmp/psss-temp.py''', 'exec'));__pyfile.close()
+p6
+I8
+sVapply(set.union, map(lambda x: x[1], alias_to_root_list))
+p7
+I395
+s.

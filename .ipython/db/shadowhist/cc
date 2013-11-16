@@ -1,0 +1,17 @@
+(dp1
+Vround(-123.1234567, 2)
+p2
+I1427
+sVimport yelp.stubs.QueryLMStub
+p3
+I205
+sVlm.distribution("en", "very sweet stuff")['results'][0]
+p4
+I1093
+sVprint(';'.join(__IP.Completer.all_completions('q.'))) #PYTHON-MODE SILENT
+p5
+I707
+sVprint(';'.join(__IP.Completer.all_completions('yelp_lib.'))) #PYTHON-MODE SILENT
+p6
+I47
+s.

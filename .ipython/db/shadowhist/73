@@ -1,0 +1,32 @@
+(dp1
+Vexecfile(r'/tmp/ipython-18020m4Q.py') # PYTHON-MODE
+p2
+I526
+sVclean_query('bike repair/maintenance')
+p3
+I1257
+sVengl.alias_to_countfile
+p4
+I716
+sVimport yelp.util
+p5
+I1199
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.Q'))) #PYTHON-MODE SILENT
+p6
+I744
+sVprint(';'.join(__IP.Completer.all_completions('Q2CP'))) #PYTHON-MODE SILENT
+p7
+I833
+sVconf2.lang_to_repos["en"] = en_repo
+p8
+I1004
+sVfuture
+p9
+I246
+sVfake.query_ball_point(numpy.array([0,0,0]), 0.5)
+p10
+I1423
+sVfind_languages('/nail/scratch/msaric/queries')
+p11
+I626
+s.

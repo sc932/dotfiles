@@ -1,0 +1,26 @@
+(dp1
+Vprint(';'.join(get_ipython().Completer.all_completions('Lo'))) #PYTHON-MODE SILENT
+p2
+I17
+sVQ2CPrepareDataload(['list', 'stats', 'it']).run()
+p3
+I849
+sVimport scipy.spatial
+p4
+I1415
+sVcrank.main()
+p5
+I1246
+sVimport Cython
+p6
+I1502
+sVq = yelp.stubs.QueryLM(querylm_host="stagebsearch5")
+p7
+I1264
+sVlen(bad_impressions_by_category['822']['ids)
+p8
+I1470
+sVg.children['artsandcrafts']
+p9
+I559
+s.

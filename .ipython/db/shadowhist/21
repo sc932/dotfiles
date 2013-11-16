@@ -1,0 +1,23 @@
+(dp1
+Vquit
+p2
+I152
+sVquery_lm.backend.lm_backend.init_lm_backend()
+p3
+I1083
+sVz.append([])
+p4
+I584
+sVitrepo.marginal_catinfo.calc_countfile_count()
+p5
+I887
+sVlen(lang_to_cats)
+p6
+I659
+sVtry:\u000a    a = "asdasd"\u000a    b = a/2\u000aexcept TypeError, e:\u000a    print "Except: %s", e.str()
+p7
+I1096
+sValias_to_descendants
+p8
+I458
+s.

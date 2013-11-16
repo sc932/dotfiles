@@ -1,0 +1,29 @@
+(dp1
+Vline
+p2
+I1355
+sVimport sys; sys.path.append("/nail/home/msaric/pg/query_lm")
+p3
+I1049
+sVlm = lmb.get_lm_backend()
+p4
+I1090
+sVset(None)
+p5
+I514
+sVprint(';'.join(__IP.Completer.all_completions('x.__geta'))) #PYTHON-MODE SILENT
+p6
+I928
+sVhasattr(x, 'jozo')
+p7
+I937
+sVnot (set(['a']]) & set(['b']))
+p8
+I562
+sVsorted(q2c_dict.iteritems(), key=lambda x: x['ctr'])
+p9
+I300
+sV# Create an instance of the QueryLM stub
+p10
+I1186
+s.

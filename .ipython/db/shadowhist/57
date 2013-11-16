@@ -1,0 +1,23 @@
+(dp1
+Vstub.distribution(lang='en', query='specialty eye care', limit=1)()
+p2
+I1117
+sVls /nail/scratch/msaric/queries/category-bars/lang-*/matchtype-_match_total
+p3
+I642
+sVtype(a['lucy_queries'])
+p4
+I1333
+sVdatetime.datetime.utcnow()
+p5
+I1024
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.hackathon_mrjob.'))) #PYTHON-MODE SILENT
+p6
+I742
+sVprint(';'.join(__IP.Completer.all_completions('query_lm.di'))) #PYTHON-MODE SILENT
+p7
+I1169
+sVexecfile(r'/tmp/ipython-38397w0Z.py') # PYTHON-MODE
+p8
+I1236
+s.

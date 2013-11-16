@@ -1,0 +1,26 @@
+(dp1
+Vsys.path.append("/nail/home/msaric/pg/query_lm")
+p2
+I968
+sVprint(';'.join(get_ipython().Completer.all_completions('maybe_pfo'))) #PYTHON-MODE SILENT
+p3
+I14
+sVsorted(q2c_dict.iteritems(), key=lambda x: x[1]['ctr'], reverse=True)
+p4
+I304
+sVimport yelp.stubs
+p5
+I167
+sVsorted(q2c_dict)
+p6
+I285
+sVls /nail/scratch/msaric/queries/category-yoga/lang-en/matchtype-_match_total/
+p7
+I863
+sVlen(bad_impressions_by_category[822]['ids'])
+p8
+I1473
+sVad_info[0].split(", [")
+p9
+I1433
+s.

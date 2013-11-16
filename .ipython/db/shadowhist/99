@@ -1,0 +1,17 @@
+(dp1
+Vif prefix: print "A"
+p2
+I965
+sV(lambda x,y: x)(1,2)
+p3
+I346
+sVlen(bad_impressions_by_category[0]['ids'])
+p4
+I1475
+sVprint(';'.join(__IP.Completer.all_completions('os.EX_Ca'))) #PYTHON-MODE SILENT
+p5
+I40
+sVfor alias in aliases:
+p6
+I478
+s.

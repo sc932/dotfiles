@@ -1,0 +1,28 @@
+(dp1
+Vprint(';'.join(get_ipython().Completer.all_completions('Load'))) #PYTHON-MODE SILENT
+p2
+I18
+sVos.path.exists('/')
+p3
+I851
+sVcd stubs
+p4
+I210
+sV?
+I803
+sVconf2.repo("en")
+p5
+I994
+sVls /tmp/lm_repos/en
+p6
+I998
+sVbackoff_qlm_score_receive_as_q2c(f)
+p7
+I1305
+sVprint(';'.join(__IP.Completer.all_completions('itrepo.calc_c'))) #PYTHON-MODE SILENT
+p8
+I879
+sVx.jozo = 3
+p9
+I923
+s.

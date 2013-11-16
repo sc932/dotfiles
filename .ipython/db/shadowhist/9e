@@ -1,0 +1,20 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_compute_q2c_lm_data.MRSearc'))) #PYTHON-MODE SILENT
+p2
+I104
+sVprint "zorro".startswith(2)
+p3
+I199
+sVquery_lm.distribution('en', 'ice cream', limit=5)()
+p4
+I1181
+sVelse:
+p5
+I61
+sVfrom util.text.clean_query import clean_query  # normalizes queries
+p6
+I1196
+sVtime.asctime(time.gmtime())
+p7
+I904
+s.

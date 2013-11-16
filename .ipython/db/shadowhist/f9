@@ -1,0 +1,23 @@
+(dp1
+Vprint backoff_qlm_score_receive_as_q2c(f)
+p2
+I1311
+sVchildren |= alias_to_descendants['shopping'] & aliases
+p3
+I470
+sVprint(';'.join(__IP.Completer.all_completions('mrjob.pr'))) #PYTHON-MODE SILENT
+p4
+I38
+sVls /nail/scratch/msaric/queries/
+p5
+I664
+sVlen(lang_to_cats['fr'])
+p6
+I658
+sVprint(';'.join(__IP.Completer.all_completions('YelpEm'))) #PYTHON-MODE SILENT
+p7
+I72
+sVprint(';'.join(get_ipython().Completer.all_completions('Loa'))) #PYTHON-MODE SILENT
+p8
+I21
+s.

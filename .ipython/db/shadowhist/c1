@@ -1,0 +1,32 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('LoadQ'))) #PYTHON-MODE SILENT
+p2
+I25
+sVmain_object=Q2CPrepareDataload(['help'])
+p3
+I845
+sVexecfile(r'/tmp/ipython-9158Ysm.py') # PYTHON-MODE
+p4
+I1313
+sVconf = query_lm.lm_repo.LMReposConfig.init_with_prefix("/tmp/mirkotron", ["en", "de", "it"])
+p5
+I1006
+sVprint(';'.join(__IP.Completer.all_completions('backoff_ql'))) #PYTHON-MODE SILENT
+p6
+I1299
+sVunion(map(lambda p: p[1], alias_to_root_list))
+p7
+I390
+sVq.find_languages(prefix)
+p8
+I703
+sVprint(';'.join(__IP.Completer.all_completions('.ali'))) #PYTHON-MODE SILENT
+p9
+I687
+sVos.path.commonprefix(glob.glob('/nail/scratch/msaric/queries/category-*'))
+p10
+I615
+sVos.setegid
+p11
+I43
+s.

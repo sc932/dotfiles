@@ -1,0 +1,11 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('yelp.stubs.QueryLMStub.'))) #PYTHON-MODE SILENT
+p2
+I172
+sVtry:\u000a    a = "asdasd"\u000a    b = a/2\u000aexcept TypeError, e:\u000a    print "Except: %s", str(e)
+p3
+I1097
+sV# this future immediately.
+p4
+I1188
+s.

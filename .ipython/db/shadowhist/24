@@ -1,0 +1,23 @@
+(dp1
+Vexecfile(r'/tmp/ipython-18020BVY.py') # PYTHON-MODE
+p2
+I550
+sVyelp.stubs.QueryLM().distribution('es', 'clases de tenis', limit=5)()
+p3
+I1156
+sVmr_printq = MRQueryLMPrintQ
+p4
+I1336
+sVlanguages = [ os.path.basename(x) for x in glob.glob('/nail/scratch/msaric/queries/category-*/lang-*') ]
+p5
+I620
+sValias_to_q2c_dict=dict(map(lambda entry: (category_maps.id_to_alias_map[int(entry[0])], entry[1]), q2c_dict.iteritems()))
+p6
+I318
+sVprint(';'.join(__IP.Completer.all_completions('yelp.stubs.QueryLM.'))) #PYTHON-MODE SILENT
+p7
+I177
+sVline = '["[-0.84, 3538.80]", ["deptstores", "shoppingcenters"]] [[2143066, "shopping", "[-2.73, 3544.21]", 0], [2551476, "shopping", "[-8.58, 3539.52]", 0]]'
+p8
+I1430
+s.

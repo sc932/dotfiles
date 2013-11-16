@@ -1,0 +1,17 @@
+(dp1
+Vdef crank():
+p2
+I1215
+sVg.chld_reach['artsandcrafts']
+p3
+I558
+sVline.split('[[')[1].split(']')[0][-1]
+p4
+I1359
+sVcats=q.find_categories(prefix, q.find_languages(prefix))
+p5
+I721
+sVprint(';'.join(__IP.Completer.all_completions('.MRSea'))) #PYTHON-MODE SILENT
+p6
+I95
+s.

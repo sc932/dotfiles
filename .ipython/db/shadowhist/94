@@ -1,0 +1,17 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('yelp.config'))) #PYTHON-MODE SILENT
+p2
+I1161
+sVb = u'dzordsze'
+p3
+I1067
+sVexecfile(r'/tmp/ipython-9158vES.py') # PYTHON-MODE
+p4
+I1296
+sVcrank(0, 5)
+p5
+I1233
+sVimport query_lm.backend.backend
+p6
+I154
+s.

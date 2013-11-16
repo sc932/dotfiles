@@ -1,0 +1,32 @@
+(dp1
+Vimport yelp.logic
+p2
+I265
+sVyelp.stubs.QueryLM().suggest('croatian american', 5)
+p3
+I238
+sVfrom batch.query_lm.mr_print_querylm_queries import MRQueryLMPrintQ
+p4
+I1335
+sVdataloaders.Dataloader.__subclasses__()[0].__name__
+p5
+I775
+sVprint(';'.join(__IP.Completer.all_completions('backoff_qlm_score_se'))) #PYTHON-MODE SILENT
+p6
+I1301
+sV"a" * 0
+p7
+I355
+sVprint(';'.join(__IP.Completer.all_completions('string.split'))) #PYTHON-MODE SILENT
+p8
+I1218
+sVline.split("]]")[0].split("[")[-1].split(", ")
+p9
+I1382
+sVq=set('[]')
+p10
+I473
+sVrepos: [en, de]
+p11
+I914
+s.

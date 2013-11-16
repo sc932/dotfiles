@@ -1,0 +1,17 @@
+(dp1
+Vq=yelp.stubs.QueryLM(querylm_hst="xxxxx")
+p2
+I1284
+sVtime.gmtime()
+p3
+I903
+sVexecfile(r'/tmp/ipython-18020OYq.py') # PYTHON-MODE
+p4
+I545
+sVprint(';'.join(__IP.Completer.all_completions('polish.mar'))) #PYTHON-MODE SILENT
+p5
+I727
+sVg.par_reach_dict['flowers']
+p6
+I529
+s.

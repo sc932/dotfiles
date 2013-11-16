@@ -1,0 +1,22 @@
+(dp1
+Vmap(lambda x: ('a', x[1]), sorted(q2c_dict.iteritems(), key=lambda x: x[1]['ctr'], reverse=True))
+p2
+I306
+sVc
+I826
+sVexcept ValueError, e:
+p3
+I1095
+sVd[['a','b']]=2
+p4
+I396
+sVexecfile(r'/tmp/ipython-18020c4T.py') # PYTHON-MODE
+p5
+I571
+sVq=yelp.stubs.QueryLM(querylm_host="xxxxx")
+p6
+I1283
+sVq.append('a')
+p7
+I432
+s.

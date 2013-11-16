@@ -1,0 +1,14 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('dataloaders.Dataloader.__sub'))) #PYTHON-MODE SILENT
+p2
+I772
+sVimport query_lm.backend
+p3
+I153
+sVyelp.stubs.QueryLM().get_log_probs('specialty eye care', 5)
+p4
+I232
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.Q2'))) #PYTHON-MODE SILENT
+p5
+I745
+s.

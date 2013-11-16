@@ -1,0 +1,17 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('batch.'))) #PYTHON-MODE SILENT
+p2
+I97
+sVc.a=9
+p3
+I827
+sVline.split(', []]')
+p4
+I1455
+sVexecfile(r'/tmp/ipython-10862bNf.py') # PYTHON-MODE
+p5
+I509
+sVscipy.spatial.KDTree
+p6
+I1416
+s.

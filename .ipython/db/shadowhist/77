@@ -1,0 +1,8 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('x.__g'))) #PYTHON-MODE SILENT
+p2
+I926
+sVfrom collections import namedtuple
+p3
+I667
+s.

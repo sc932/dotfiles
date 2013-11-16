@@ -1,0 +1,23 @@
+(dp1
+Vq_lm_dict=future[0]
+p2
+I250
+sVfake = scipy.spatial.KDTree(numpy.array([[1,1], [1,0], [0,1], [0,0]]))
+p3
+I1418
+sVcd log-opt
+p4
+I216
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.Dataloader.__s'))) #PYTHON-MODE SILENT
+p5
+I770
+sVg.chld_reach['costumes']
+p6
+I556
+sVCython.__doc__
+p7
+I1503
+sVline.split(' []]')[0]
+p8
+I1449
+s.

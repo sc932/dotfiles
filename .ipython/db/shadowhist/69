@@ -1,0 +1,17 @@
+(dp1
+Vg.parents['stationery']
+p2
+I532
+sVx=namedtuple('jkk',['a','f'])
+p3
+I822
+sVline.split("]]")[0].split("[")[2][:-4].split(", ")
+p4
+I1429
+sVpolish.marginal_countfile
+p5
+I728
+sVprint(';'.join(__IP.Completer.all_completions('que'))) #PYTHON-MODE SILENT
+p6
+I855
+s.

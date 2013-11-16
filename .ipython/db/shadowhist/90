@@ -1,0 +1,23 @@
+(dp1
+Vroots = apply(set.union, map(lambda x: set(x[1]), alias_to_root_list))
+p2
+I416
+sVyelp.stubs.QueryLM().distribution('en', 'hi')()
+p3
+I1123
+sV"%.4f" % 0.1234567
+p4
+I1424
+sVm=util.validate.YelpEmail()
+p5
+I79
+sVprint(';'.join(__IP.Completer.all_completions('time.tim'))) #PYTHON-MODE SILENT
+p6
+I1027
+sVfile_name, bad_impressions_by_category, bad_impressions_by_id = read_file("opp_stream_new.txt")
+p7
+I1461
+sV"%.2f" % 123.1234567
+p8
+I1425
+s.

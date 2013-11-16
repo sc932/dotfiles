@@ -1,0 +1,29 @@
+(dp1
+Vline = [1, []]
+p2
+I1442
+sVprint(';'.join(__IP.Completer.all_completions('dataloades.'))) #PYTHON-MODE SILENT
+p3
+I743
+sVexecfile(r'/tmp/ipython-5538uL1.py') # PYTHON-MODE
+p4
+I732
+sVif'batch.query_to_category.mr_compute_q2c_lm_data' in sys.modules:
+p5
+I87
+sVa.distribution('en', 'ice cream', limit=5)()
+p6
+I1178
+sVexecfile(r'/tmp/ipython-10862NJG.py') # PYTHON-MODE
+p7
+I504
+sVcat_cmp('eventplanning', 'partysupplies') or (alias_to_q2c_dict['eventplanning']['ctr'] < alias_to_q2c_dict['partysupplies']['ctr']
+p8
+I377
+sVdict(map(lambda entry: (category_maps.id_to_alias_map[entry[1]], entry[2]), q2c_dict.iteritems()))
+p9
+I308
+sVai
+p10
+I1376
+s.

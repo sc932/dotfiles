@@ -1,0 +1,23 @@
+(dp1
+Vexecfile(r'/tmp/ipython-10862Y8h.py') # PYTHON-MODE
+p2
+I459
+sVprint(';'.join(__IP.Completer.all_completions('.margina'))) #PYTHON-MODE SILENT
+p3
+I690
+sVexecfile(r'/tmp/ipython-18020CdT.py') # PYTHON-MODE
+p4
+I560
+sValias_to_q2c_dict = dict(map(lambda entry: (id_to_alias[int(entry[0])], entry[1]), id_q2c_dict.iteritems()))
+p5
+I462
+sVen_repo.prefix = conf2.repo_dir_prefix("en")
+p6
+I996
+sVprint(';'.join(__IP.Completer.all_completions('m.language'))) #PYTHON-MODE SILENT
+p7
+I82
+sVhelp(x.__getattribute__)
+p8
+I931
+s.

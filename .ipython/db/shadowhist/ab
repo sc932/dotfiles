@@ -1,0 +1,11 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('encat.al'))) #PYTHON-MODE SILENT
+p2
+I765
+sVfor k, v in di:
+p3
+I291
+sVexecfile(r'/tmp/ipython-4298iaE.py') # PYTHON-MODE
+p4
+I635
+s.

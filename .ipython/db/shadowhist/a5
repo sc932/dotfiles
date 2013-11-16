@@ -1,0 +1,23 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('yaml.'))) #PYTHON-MODE SILENT
+p2
+I915
+sVexecfile(r'/tmp/ipython-9158-eO.py') # PYTHON-MODE
+p3
+I1316
+sVprint(';'.join(__IP.Completer.all_completions('a.ru'))) #PYTHON-MODE SILENT
+p4
+I145
+sVexecfile(r'/tmp/ipython-4298iMc.py') # PYTHON-MODE
+p5
+I625
+sVsum(((location_array - numpy.array([1000, 1000]))**2).T)
+p6
+I1497
+sVimport pprint
+p7
+I1192
+sVroot_maps = set(map(lambda p: p[1], alias_to_root_list))
+p8
+I388
+s.

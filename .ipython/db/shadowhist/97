@@ -1,0 +1,17 @@
+(dp1
+Vexecfile(r'/tmp/ipython-55384nC.py') # PYTHON-MODE
+p2
+I698
+sV":n=3:lm=wb3".split(':')
+p3
+I1039
+sVexecfile(r'/tmp/ipython-55383fH.py') # PYTHON-MODE
+p4
+I668
+sVimport /nail/home/sclark/scratch/biz_details_query_viewer_script.py
+p5
+I1397
+sVprint(';'.join(__IP.Completer.all_completions('yaml.YAM'))) #PYTHON-MODE SILENT
+p6
+I918
+s.

@@ -1,0 +1,32 @@
+(dp1
+Vimport yelp.util.
+p2
+I1198
+sVdef __FFAP_get_module_path(module):
+p3
+I3
+sVid_q2c_dict
+p4
+I461
+sVcat_is_higher('eventservices', 'eventplanning')
+p5
+I358
+sVcat_is_higher('costumes', 'shopping')
+p6
+I351
+sVyelp.stubs.QueryLM().distribution('en', 'dance classes', gamma2=1, limit=5)()
+p7
+I1151
+sVg.parents['artsandcrafts']
+p8
+I535
+sVq.distribution('en', 'speciality eye care')()
+p9
+I1261
+sVfrom collections import defaultdict
+p10
+I410
+sVa is unicode
+p11
+I1068
+s.

@@ -1,0 +1,19 @@
+(dp1
+Vreload /nail/home/msaric/pg/query_lm/query_lm/backend/cpp_wrapper.so
+p2
+I1056
+sVz
+I583
+sVyelp.search.query_lm.q2c_compat.q2c_dict_from_ctr_results({'mosques': 1, 'specialed': 0.75})
+p3
+I1274
+sVsorted(clique, cmp=cat_is_higher, reverse=True)
+p4
+I371
+sVlen(q)
+p5
+I991
+sVq=namedtuple('Zorro', 'a b')
+p6
+I811
+s.

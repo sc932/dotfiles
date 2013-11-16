@@ -1,0 +1,26 @@
+(dp1
+Vlm
+p2
+I1082
+sVprint(';'.join(__IP.Completer.all_completions('x.__getattribute__'))) #PYTHON-MODE SILENT
+p3
+I929
+sVprint(';'.join(__IP.Completer.all_completions('dataloaders.Dataloader.__su'))) #PYTHON-MODE SILENT
+p4
+I771
+sVsorted(clique, cmp=cat_cmp_with_ctr(alias_to_q2c_dict), reverse=True)
+p5
+I382
+sVconf = query_lm.lm_repo.LMReposConfig()
+p6
+I971
+sVprint(';'.join(__IP.Completer.all_completions('mr.'))) #PYTHON-MODE SILENT
+p7
+I197
+sVline = '["[-0.68, 3545.32]", ["petstore"]]      [[2906409, "petstore", "[-8.75, 3532.95]", 0]]'
+p8
+I1428
+sVstub.distribution(lang='en', query='specialty eye care', limit=5)()
+p9
+I1116
+s.

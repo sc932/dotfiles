@@ -1,0 +1,41 @@
+(dp1
+Valias_to_root_list
+p2
+I324
+sVprint(';'.join(__IP.Completer.all_completions('yelp.configu'))) #PYTHON-MODE SILENT
+p3
+I1162
+sVb.distribution('it', 'pasta')
+p4
+I1057
+sVset.intersection(set('a'),set('b'))
+p5
+I424
+sVset(['a']]) & set(['b'])
+p6
+I564
+sVreload(lang_repo)
+p7
+I870
+sVprint(';'.join(__IP.Completer.all_completions('itrepo.marginal_catinfo.'))) #PYTHON-MODE SILENT
+p8
+I885
+sVprint(';'.join(__IP.Completer.all_completions('util.val'))) #PYTHON-MODE SILENT
+p9
+I73
+sVbad_impressions_by_category[1].keys()
+p10
+I1483
+sVprint(';'.join(__IP.Completer.all_completions('conf.create_'))) #PYTHON-MODE SILENT
+p11
+I1013
+sVa.join(['a','dfgfgfg','vbvb'])
+p12
+I160
+sVyelp.search.query_lm.q2c_compat
+p13
+I1268
+sVfor node in node_set:
+p14
+I456
+s.

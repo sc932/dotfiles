@@ -1,0 +1,11 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('QueryLMStub.'))) #PYTHON-MODE SILENT
+p2
+I171
+sVprint(';'.join(__IP.Completer.all_completions('Q2C'))) #PYTHON-MODE SILENT
+p3
+I699
+sVlen(bad_impressions_by_category[1]['ids'])
+p4
+I1476
+s.

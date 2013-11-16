@@ -1,0 +1,11 @@
+(dp1
+Vyelp.stubs.QueryLM().suggest('san', 5)()
+p2
+I234
+sVcats=find_categories(prefix, set(['de']))
+p3
+I670
+sVyaml.dump({'djirlo':2, 'hehe':['ziza','mirko']})
+p4
+I961
+s.

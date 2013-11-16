@@ -1,0 +1,23 @@
+(dp1
+Vyelp.stubs.QueryLMStub().log_probs('abortion clinics', 5)()
+p2
+I208
+sVprint(';'.join(__IP.Completer.all_completions('x.__'))) #PYTHON-MODE SILENT
+p3
+I925
+sVexecfile(r'/tmp/ipython-51275hvc.py') # PYTHON-MODE
+p4
+I35
+sVbuild_KDtrees(bad_impressions_by_category)
+p5
+I1481
+sVad_info[0].split(', "[')[1].split(']"')[0]
+p6
+I1436
+sVprint(';'.join(__IP.Completer.all_completions('batch.query_to_category.mr_compute_q2c_lm_data'))) #PYTHON-MODE SILENT
+p7
+I99
+sVexecfile(r'/tmp/ipython-11888XtW.py') # PYTHON-MODE
+p8
+I832
+s.

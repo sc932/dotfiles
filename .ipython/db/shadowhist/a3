@@ -1,0 +1,29 @@
+(dp1
+Vlen(bad_impressions_by_category[2]['ids'])
+p2
+I1477
+sVbackoff_qlm_score_receive(f)
+p3
+I1314
+sVyelp.stubs.QueryLM().suggest('san')
+p4
+I243
+sVexecfile(r'/tmp/ipython-5538QsY.py') # PYTHON-MODE
+p5
+I644
+sVimport yaml
+p6
+I890
+sVprint(';'.join(__IP.Completer.all_completions('yelp.configure.con'))) #PYTHON-MODE SILENT
+p7
+I1165
+sVq=dict()
+p8
+I483
+sVancestors
+p9
+I126
+sVline.split('[[')[0].split("]]")[1]
+p10
+I1439
+s.

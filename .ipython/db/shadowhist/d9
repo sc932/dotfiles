@@ -1,0 +1,29 @@
+(dp1
+Vprint(';'.join(__IP.Completer.all_completions('query_lm'))) #PYTHON-MODE SILENT
+p2
+I271
+sVimport sys; sys.path.append("/nail/home/msaric/pg/query_lm"); from query_lm.backend import lm_backend; b = lm_backend.LMBackend()
+p3
+I1052
+sVexecfile(r'/tmp/ipython-11888l_X.py') # PYTHON-MODE
+p4
+I839
+sVconf2 = query_lm.lm_repo.LMReposConfig.load_from_prefix("/tmp/mirkotron")
+p5
+I1011
+sVencat.alias_to_countfile
+p6
+I766
+sVreload(query_lm.dataload)
+p7
+I872
+sVexecfile(r'/tmp/ipython-10862PSI.py') # PYTHON-MODE
+p8
+I521
+sVCython.__name__
+p9
+I1505
+sVline.split("]]")[0].split("[")[3]
+p10
+I1349
+s.

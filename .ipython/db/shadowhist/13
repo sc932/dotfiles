@@ -1,0 +1,14 @@
+(dp1
+Vyelp.stubs.QueryLM().distribution('en', 'cats and puppies', limit=5)()
+p2
+I1158
+sVa.lucy_queries
+p3
+I1331
+sVen_repo.create_prefix()
+p4
+I997
+sVprint(';'.join(__IP.Completer.all_completions('backof'))) #PYTHON-MODE SILENT
+p5
+I1298
+s.

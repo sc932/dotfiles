@@ -1,0 +1,562 @@
+***************************************************************************
+
+IPython post-mortem report
+
+IPython version: 0.10 
+
+BZR revision   : 1210 
+
+Platform info  : os.name -> posix, sys.platform -> linux2
+
+***************************************************************************
+
+Current user configuration structure:
+
+{'Version': 0,
+ '__allownew': False,
+ 'alias': [],
+ 'args': [],
+ 'autocall': 1,
+ 'autoedit_syntax': 0,
+ 'autoexec': [],
+ 'autoindent': 1,
+ 'automagic': 1,
+ 'banner': 1,
+ 'c': '',
+ 'cache_size': 1000,
+ 'classic': 0,
+ 'color_info': 1,
+ 'colors': 'Linux',
+ 'confirm_exit': 1,
+ 'debug': 0,
+ 'deep_reload': 0,
+ 'editor': 'vim',
+ 'embedded': False,
+ 'execfile': [],
+ 'execute': [''],
+ 'gthread': 0,
+ 'help': 0,
+ 'import_all': [],
+ 'import_mod': [],
+ 'import_some': [[]],
+ 'include': [],
+ 'interact': 0,
+ 'ipythondir': u'/nail/home/sclark/.ipython',
+ 'log': 0,
+ 'logfile': '',
+ 'logplay': '',
+ 'magic_docstrings': 0,
+ 'messages': 1,
+ 'multi_line_specials': 1,
+ 'nosep': 0,
+ 'object_info_string_level': 0,
+ 'opts': Struct({'__allownew': True}),
+ 'pdb': 0,
+ 'pprint': 1,
+ 'profile': '',
+ 'prompt_in1': 'In [\\#]: ',
+ 'prompt_in2': '   .\\D.: ',
+ 'prompt_out': 'Out[\\#]: ',
+ 'prompts_pad_left': 1,
+ 'pydb': 0,
+ 'pylab': 0,
+ 'pylab_import_all': 1,
+ 'q4thread': 0,
+ 'qthread': 0,
+ 'quick': 0,
+ 'quiet': 0,
+ 'rcfile': 'ipythonrc',
+ 'readline': 1,
+ 'readline_merge_completions': 1,
+ 'readline_omit__names': 0,
+ 'readline_parse_and_bind': ['tab: complete',
+                             '"\\C-l": possible-completions',
+                             'set show-all-if-ambiguous on',
+                             '"\\C-o": tab-insert',
+                             '"\\M-i": "    "',
+                             '"\\M-o": "\\d\\d\\d\\d"',
+                             '"\\M-I": "\\d\\d\\d\\d"',
+                             '"\\C-r": reverse-search-history',
+                             '"\\C-s": forward-search-history',
+                             '"\\C-p": history-search-backward',
+                             '"\\C-n": history-search-forward',
+                             '"\\e[A": history-search-backward',
+                             '"\\e[B": history-search-forward',
+                             '"\\C-k": kill-line',
+                             '"\\C-u": unix-line-discard'],
+ 'readline_remove_delims': '-/~',
+ 'screen_length': -2,
+ 'separate_in': '\n',
+ 'separate_out': '',
+ 'separate_out2': '',
+ 'system_header': 'IPython system call: ',
+ 'system_verbose': 0,
+ 'term_title': 1,
+ 'tk': 0,
+ 'upgrade': 0,
+ 'wildcards_case_sensitive': 1,
+ 'wthread': 0,
+ 'wxversion': '0',
+ 'xmode': 'Context'}
+
+***************************************************************************
+
+Crash traceback:
+
+---------------------------------------------------------------------------
+BdbQuit                                 Python 2.6.7: /usr/local/bin/python
+                                                   Tue Oct  2 10:30:24 2012
+A problem occured executing Python code.  Here is the sequence of function
+calls leading up to the error, with the most recent (innermost) call last.
+
+/nail/home/sclark/pg/yelp-main/yelp/ad/config_metrics.py in <module>()
+     38 mobile_app_type_to_id = {}
+     39 for device_string, (device_id, app_versions) in config.mobile_metrics.device_to_id_and_app_versions.iteritems():
+     40 	if device_string in DEVICE_TYPE_ADS_ON:
+     41 		mobile_app_type_to_id['(all):%s:(all)' % (device_string)] = device_id*10000 - 1
+     42 		device_app_version_list = getattr(mobile, app_versions)
+     43 		for flow_type in ALL_MOBILE_APP_FLOWS:
+     44 			mobile_app_type_to_id['%s:%s:(all)' % (flow_type, device_string)] = AD_FLOW_ENUMERATION_MAP[flow_type]*1000000 + device_id*10000 - 1
+     45 			for app_version_number, app_version_string in enumerate(device_app_version_list):
+     46 				normed_device_and_app_version = util.mobile.normed_device_type_and_app_version_id(device_id, app_version_number)
+     47 				# only add device+version combos that can physically show mobile ads
+     48 				if normed_device_and_app_version >= MIN_NORMED_VAL_MOBILE_ADS_ON[device_string]: # app can show ads
+     49 					mobile_app_type_to_id['%s:%s:%s' % (flow_type, device_string, app_version_string)] = normed_device_and_app_version + 1000000*AD_FLOW_ENUMERATION_MAP[flow_type] # assumes there are less than 100 different mobile device types
+     50 
+     51 import ipdb; ipdb.set_trace()
+     52 
+---> 53 flow_type_to_id = AD_FLOW_ENUMERATION_MAP
+        global flow_type_to_id = undefined
+        global AD_FLOW_ENUMERATION_MAP = {'category': 3, 'search': 2, 'mobile_app_search': 7, 'biz_details': 1, 'mobile_search': 6, 'mobile_app_biz_details': 8, 'mobile_biz_details': 5, 'biz_photos': 4}
+     54 flow_type_to_id.update(match_type_to_id)
+     55 flow_type_to_id.update(mobile_app_type_to_id)
+     56 
+     57 id_to_flow_type = dict((id_, name) for name, id_ in flow_type_to_id.iteritems())
+     58 id_to_mobile_app_key = dict((id_, name) for name, id_ in mobile_app_type_to_id.iteritems())
+     59 
+     60 # Leave search_ad:null out of ad_metrics since it has no impressions and can break ad_metrics.
+     61 null_match = 'search_ad:' + SEARCH_MATCH_NULL
+     62 id_to_flow_type_display = dict((id_, name) for id_, name in id_to_flow_type.iteritems() if name != null_match)
+     63 
+     64 # Take out mobile_app: from display, it adds way too much clutter
+     65 # id_to_flow_type_display = dict((id_, name) for id_, name in id_to_flow_type.iteritems() if name not in mobile_app_type_to_id)
+     66 
+     67 # Maps ids to ad metric names
+     68 id_to_ad_metric_name = {
+
+/nail/home/sclark/pg/yelp-main/yelp/ad/config_metrics.py in <module>()
+     38 mobile_app_type_to_id = {}
+     39 for device_string, (device_id, app_versions) in config.mobile_metrics.device_to_id_and_app_versions.iteritems():
+     40 	if device_string in DEVICE_TYPE_ADS_ON:
+     41 		mobile_app_type_to_id['(all):%s:(all)' % (device_string)] = device_id*10000 - 1
+     42 		device_app_version_list = getattr(mobile, app_versions)
+     43 		for flow_type in ALL_MOBILE_APP_FLOWS:
+     44 			mobile_app_type_to_id['%s:%s:(all)' % (flow_type, device_string)] = AD_FLOW_ENUMERATION_MAP[flow_type]*1000000 + device_id*10000 - 1
+     45 			for app_version_number, app_version_string in enumerate(device_app_version_list):
+     46 				normed_device_and_app_version = util.mobile.normed_device_type_and_app_version_id(device_id, app_version_number)
+     47 				# only add device+version combos that can physically show mobile ads
+     48 				if normed_device_and_app_version >= MIN_NORMED_VAL_MOBILE_ADS_ON[device_string]: # app can show ads
+     49 					mobile_app_type_to_id['%s:%s:%s' % (flow_type, device_string, app_version_string)] = normed_device_and_app_version + 1000000*AD_FLOW_ENUMERATION_MAP[flow_type] # assumes there are less than 100 different mobile device types
+     50 
+     51 import ipdb; ipdb.set_trace()
+     52 
+---> 53 flow_type_to_id = AD_FLOW_ENUMERATION_MAP
+        global flow_type_to_id = undefined
+        global AD_FLOW_ENUMERATION_MAP = {'category': 3, 'search': 2, 'mobile_app_search': 7, 'biz_details': 1, 'mobile_search': 6, 'mobile_app_biz_details': 8, 'mobile_biz_details': 5, 'biz_photos': 4}
+     54 flow_type_to_id.update(match_type_to_id)
+     55 flow_type_to_id.update(mobile_app_type_to_id)
+     56 
+     57 id_to_flow_type = dict((id_, name) for name, id_ in flow_type_to_id.iteritems())
+     58 id_to_mobile_app_key = dict((id_, name) for name, id_ in mobile_app_type_to_id.iteritems())
+     59 
+     60 # Leave search_ad:null out of ad_metrics since it has no impressions and can break ad_metrics.
+     61 null_match = 'search_ad:' + SEARCH_MATCH_NULL
+     62 id_to_flow_type_display = dict((id_, name) for id_, name in id_to_flow_type.iteritems() if name != null_match)
+     63 
+     64 # Take out mobile_app: from display, it adds way too much clutter
+     65 # id_to_flow_type_display = dict((id_, name) for id_, name in id_to_flow_type.iteritems() if name not in mobile_app_type_to_id)
+     66 
+     67 # Maps ids to ad metric names
+     68 id_to_ad_metric_name = {
+
+/usr/lib/python2.6/bdb.pyc in trace_dispatch(self=<IPython.Debugger.Pdb instance>, frame=<frame object>, event='line', arg=None)
+     31             canonic = os.path.abspath(filename)
+     32             canonic = os.path.normcase(canonic)
+     33             self.fncache[filename] = canonic
+     34         return canonic
+     35 
+     36     def reset(self):
+     37         import linecache
+     38         linecache.checkcache()
+     39         self.botframe = None
+     40         self._set_stopinfo(None, None)
+     41 
+     42     def trace_dispatch(self, frame, event, arg):
+     43         if self.quitting:
+     44             return # None
+     45         if event == 'line':
+---> 46             return self.dispatch_line(frame)
+        global stoplinenot = undefined
+        global Falset = undefined
+        global f_linenoR = undefined
+        global R = undefined
+        global t = undefined
+        global TrueR = undefined
+        global s = undefined
+        global usr = undefined
+        global lib = undefined
+        global python2 = undefined
+        global bdb.pyR = undefined
+        global a = undefined
+        global c = undefined
+        global C = undefined
+        global i = undefined
+        global j = undefined
+        global o = undefined
+        global S = undefined
+        global n = undefined
+        global _ = undefined
+     47         if event == 'call':
+     48             return self.dispatch_call(frame, arg)
+     49         if event == 'return':
+     50             return self.dispatch_return(frame, arg)
+     51         if event == 'exception':
+     52             return self.dispatch_exception(frame, arg)
+     53         if event == 'c_call':
+     54             return self.trace_dispatch
+     55         if event == 'c_exception':
+     56             return self.trace_dispatch
+     57         if event == 'c_return':
+     58             return self.trace_dispatch
+     59         print 'bdb.Bdb.dispatch: unknown debugging event:', repr(event)
+     60         return self.trace_dispatch
+     61 
+
+/usr/lib/python2.6/bdb.pyc in dispatch_line(self=<IPython.Debugger.Pdb instance>, frame=<frame object>)
+     50             return self.dispatch_return(frame, arg)
+     51         if event == 'exception':
+     52             return self.dispatch_exception(frame, arg)
+     53         if event == 'c_call':
+     54             return self.trace_dispatch
+     55         if event == 'c_exception':
+     56             return self.trace_dispatch
+     57         if event == 'c_return':
+     58             return self.trace_dispatch
+     59         print 'bdb.Bdb.dispatch: unknown debugging event:', repr(event)
+     60         return self.trace_dispatch
+     61 
+     62     def dispatch_line(self, frame):
+     63         if self.stop_here(frame) or self.break_here(frame):
+     64             self.user_line(frame)
+---> 65             if self.quitting: raise BdbQuit
+        global R = undefined
+        global RA = undefined
+        global t = undefined
+        global condt = undefined
+        global funcnameR = undefined
+        global listRB = undefined
+        global s = undefined
+        global usr = undefined
+        global lib = undefined
+        global python2 = undefined
+        global bdb.pyt = undefined
+        global set_break = undefined
+        global c = undefined
+        global C = undefined
+        global i = undefined
+        global j = undefined
+        global o = undefined
+        global d = undefined
+        global S = undefined
+        global f = undefined
+        global x = undefined
+        global D = undefined
+        global q = undefined
+        global Wt = undefined
+        global p = undefined
+        global n = undefined
+        global Ns = undefined
+        global There = undefined
+        global are = undefined
+        global no = undefined
+        global breakpoints = undefined
+        global ss = undefined
+        global breakpoint = undefined
+        global at = undefined
+        global bplistt = undefined
+        global deleteMet = undefined
+        global has_keyt = undefined
+        global remove = undefined
+        global RB = undefined
+        global clear_break = undefined
+        global su = undefined
+        global y = undefined
+        global Wn = undefined
+        global SXy = undefined
+        global X = undefined
+        global Non = undefined
+        global numeric = undefined
+        global number = undefined
+        global bpbynumbert = undefined
+        global IndexErrorR = undefined
+        global fileR = undefined
+        global clear_bpbynumber = undefined
+        global xC = undefined
+        global qV = undefined
+        global Wq6 = undefined
+        global W = undefined
+        global blistRB = undefined
+        global clear_all_file_breaks = undefined
+        global sE = undefined
+        global Wh = undefined
+        global _ = undefined
+        global Rb = undefined
+        global clear_all_breaks = undefined
+        global s0 = undefined
+        global N = undefined
+        global get_break = undefined
+        global sK = undefined
+        global g = undefined
+        global get_breaks = undefined
+        global s3 = undefined
+        global Sd = undefined
+        global get_file_breaks = undefined
+        global get_all_breaks3 = undefined
+        global xF = undefined
+        global o8 = undefined
+        global Pn = undefined
+        global x4 = undefined
+        global Ni = undefined
+        global tb_framet = undefined
+        global tb_nextR = undefined
+        global RW = undefined
+        global R6 = undefined
+        global reverset = undefined
+        global maxt = undefined
+        global lent = undefined
+        global tb_lineno = undefined
+        global ft = undefined
+        global tt = undefined
+        global stackt = undefined
+        global get_stack9 = undefined
+        global k = undefined
+        global o.i = undefined
+        global r = undefined
+        global __args__s = undefined
+        global __return__s = undefined
+        global R8 = undefined
+        global R9 = undefined
+        global co_namet = undefined
+        global f_localsR = undefined
+        global RV = undefined
+        global f_globalst = undefined
+        global strip = undefined
+        global frame_linenot = undefined
+        global lprefixR = undefined
+        global st = undefined
+        global argst = undefined
+        global rvR = undefined
+        global format_stack_entryM = undefined
+        global B = undefined
+        global e = undefined
+        global z = undefined
+        global UWn = undefined
+        global XWd = undefined
+        global Xd = undefined
+        global __main__t = undefined
+        global __dict__R = undefined
+        global RO = undefined
+        global RR = undefined
+        global isinstancet = undefined
+        global typest = undefined
+        global CodeTypeR = undefined
+        global cmdt = undefined
+        global globalst = undefined
+        global localsR = undefined
+        global runi = undefined
+        global z.y = undefined
+        global SWn = undefined
+        global evalR = undefined
+        global exprR = undefined
+        global runeval = undefined
+        global runctx = undefined
+        global O = undefined
+        global sk = undefined
+        global funcR = undefined
+        global kwdst = undefined
+        global res = undefined
+        global runcall = undefined
+        global sR = undefined
+        global RS = undefined
+        global bdb.pyRS = undefined
+        global Z = undefined
+        global h = undefined
+        global Breakpoint = <class bdb.Breakpoint at 0x66dce90>
+        global Implements = undefined
+        global temporary = undefined
+        global ignore = undefined
+        global counts = undefined
+        global disabling = undefined
+        global re = undefined
+        global enabling = undefined
+        global conditionals.Breakpoints = undefined
+        global indexed = undefined
+        global by = undefined
+        global through = undefined
+        global bpbynumber = undefined
+        global the = undefined
+        global file = undefined
+        global line = undefined
+        global tuple = undefined
+        global using = undefined
+        global bplist.The = undefined
+        global former = undefined
+        global points = undefined
+        global to = undefined
+        global a = undefined
+        global single = undefined
+        global instance = undefined
+        global of = undefined
+        global Breakpoint.The = undefined
+        global latter = undefined
+        global list = undefined
+        global such = undefined
+        global instances = undefined
+        global since = undefined
+        global there = undefined
+        global may = undefined
+        global be = undefined
+        global more = undefined
+        global than = undefined
+        global one = undefined
+        global per = undefined
+        global line.i = undefined
+        global RY = undefined
+        global func_first_executable_lineRd = undefined
+        global RX = undefined
+        global enabledt = undefined
+        global ignoret = undefined
+        global hitsR = undefined
+        global nextR = undefined
+        global Rd = undefined
+        global bdb.pyR = undefined
+        global sV = undefined
+        global R_ = undefined
+        global index = undefined
+        global enable = undefined
+        global disable = undefined
+        global IJ = undefined
+        global IJn = undefined
+        global keep = undefined
+        global yes = undefined
+        global dbreakpoint = undefined
+        global ds = undefined
+        global stop = undefined
+        global only = undefined
+        global next = undefined
+        global hitsi = undefined
+        global already = undefined
+        global hit = undefined
+        global time = undefined
+        global stdoutR = undefined
+        global outt = undefined
+        global dispt = undefined
+        global bpprint = undefined
+        global sx = undefined
+        global Check = undefined
+        global whether = undefined
+        global we = undefined
+        global should = undefined
+        global here = undefined
+        global because = undefined
+        global b.funcname.RY = undefined
+        global R5 = undefined
+        global R7 = undefined
+        global Rz = undefined
+        global bR = undefined
+        global checkfuncname = <function checkfuncname at 0x66f75f0>
+        global p5 = undefined
+        global Sq = undefined
+        global yX = undefined
+        global o2 = undefined
+        global Sn = undefined
+        global Wq = undefined
+        global SXq = undefined
+        global Wd = undefined
+        global Determine = undefined
+        global which = undefined
+        global this = undefined
+        global acted = undefined
+        global upon.Called = undefined
+        global know = undefined
+        global bpt = undefined
+        global location.Returns = undefined
+        global that = undefined
+        global was = undefined
+        global triggered = undefined
+        global flag = undefined
+        global indicates = undefined
+        global it = undefined
+        global ok = undefined
+        global delete = undefined
+        global bp.i = undefined
+        global NN = undefined
+        global rangeRq = undefined
+        global possiblesRv = undefined
+        global val = undefined
+        global Tdbc = undefined
+        global s.i = undefined
+        global G = undefined
+        global GHd = undefined
+        global call = undefined
+        global name = undefined
+        global K = undefined
+        global Gd = undefined
+        global fnR = undefined
+        global retval = undefined
+        global bdb.pyR1 = undefined
+        global V = undefined
+        global GH = undefined
+        global exception = undefined
+        global RT = undefined
+        global exc_stuff = undefined
+        global bdb.pyR2 = undefined
+        global R1 = undefined
+        global R2 = undefined
+        global J = undefined
+        global GHt = undefined
+        global foo = <function foo at 0x66f7938>
+        global bar = <function bar at 0x66f7b90>
+        global returned = undefined
+        global nt = undefined
+        global bdb = undefined
+        global bdb.foo = undefined
+        global Rt = undefined
+        global teste = undefined
+        global __all__t = undefined
+        global ExceptionR = undefined
+        global module = undefined
+        global T = undefined
+     66         return self.trace_dispatch
+     67 
+     68     def dispatch_call(self, frame, arg):
+     69         # XXX 'arg' is no longer used
+     70         if self.botframe is None:
+     71             # First call of dispatch since reset()
+     72             self.botframe = frame.f_back # (CT) Note that this may also be None!
+     73             return self.trace_dispatch
+     74         if not (self.stop_here(frame) or self.break_anywhere(frame)):
+     75             # No need to trace this function
+     76             return # None
+     77         self.user_call(frame, arg)
+     78         if self.quitting: raise BdbQuit
+     79         return self.trace_dispatch
+     80 
+
+BdbQuit: 
+
+***************************************************************************
+
+History of session input:
+
+*** Last line of input (may not be in above history):
