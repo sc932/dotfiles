@@ -1,8 +1,0 @@
-(dp1
-Vnumpy.nonzero(sum(((location_array - numpy.array([1000, 1000]))**2).T) < 100**2)
-p2
-I1499
-sVprint(';'.join(__IP.Completer.all_completions('backoff_qlm_receive_a'))) #PYTHON-MODE SILENT
-p3
-I1318
-s.
