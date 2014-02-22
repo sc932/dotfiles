@@ -41,9 +41,9 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
-" UNCOMMENT TO USE
 set tabstop=4                    " Global tab width.
 set shiftwidth=4                 " And again, related.
+set expandtab
 
 set laststatus=2                  " Show the status line all the time
 " Useful status information at bottom of screen
@@ -51,7 +51,6 @@ set statusline=[%n]\ %<%.99f\ %h%w%m%r%y\ %{exists('*CapsLockStatusline')?CapsLo
 
 " Or use vividchalk
 colorscheme desert
-
 
 " Tab mappings.
 map <leader>tt :tabnew<cr>
@@ -69,27 +68,12 @@ map <Tab> <C-N>
 " Uncomment to use Jamis Buck's file opening plugin
 "map <Leader>t :FuzzyFinderTextMate<Enter>
 
-" Controversial...swap colon and semicolon for easier commands
-"nnoremap ; :
-"nnoremap : ;
-
-"vnoremap ; :
-"vnoremap : ;
-
 " Automatic fold settings for specific files. Uncomment to use.
 " autocmd FileType ruby setlocal foldmethod=syntax
-" autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
+autocmd FileType css  setlocal foldmethod=indent shiftwidth=2 tabstop=2
 "
 " Makegreen plugin for Ruby RSpec
 autocmd BufNewFile,BufRead *_spec.rb compiler rspec
-
-function YelpSettings()
-    set tabstop=4
-    set softtabstop=0
-    set noexpandtab
-    set shiftwidth=4
-endfunction
-autocmd BufNewFile,BufRead ~/pg/yelp-main/* call YelpSettings()
 
 set tags=./tags;/
 
