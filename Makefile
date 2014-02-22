@@ -17,6 +17,7 @@ clean:
 	rm ~/.vimrc
 	# bash
 	rm ~/.bashrc
+	rm ~/.bash_profile
 	# git
 	rm ~/.gitconfig
 	# tmux
@@ -31,6 +32,7 @@ vim:
 
 bash:
 	cp .bashrc ~/.bashrc
+	cp .bash_profile ~/.bash_profile
 	cp .inputrc ~/.inputrc
 
 # WARNING SET EMAIL/NAME INSIDE

@@ -21,5 +21,15 @@ function proml {
 }
 proml
 
-export PATH=$PATH:~/bin:~/local/usr/bin
-export PYTHONPATH=$PYTHONPATH:/Users/sclark/Library/Python/2.7/site-packages:~/src/EPI
+export PATH=$PATH:$HOME/bin:$HOME/local/usr/bin
+
+# virtualenv
+export WORKON_HOME=$HOME/.virtualenvs
+
+# osx
+if [ -f /Users/sclark/Library/Python/2.7/site-packages ]; then
+	export PYTHONPATH=$PYTHONPATH:/Users/sclark/Library/Python/2.7/site-packages
+fi
+if [ -f /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh ]; then
+	source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
+fi
