@@ -38,6 +38,9 @@ fi
 if [ -f /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh ]; then
 	source /Library/Frameworks/Python.framework/Versions/2.7/bin/virtualenvwrapper.sh
 fi
+if [ -f /Users/$USER/bin/virtualenvwrapper.sh ]; then
+	source /Users/$USER/bin/virtualenvwrapper.sh
+fi
 
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
