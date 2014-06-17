@@ -3,7 +3,6 @@ function parse_git_branch {
 }
 function proml {
     local        BLUE="\[\033[0;34m\]"
-    # OPTIONAL - if you want to use any of these other colors:
     local         RED="\[\033[0;31m\]"
     local   LIGHT_RED="\[\033[1;31m\]"
     local       GREEN="\[\033[0;32m\]"
@@ -15,11 +14,12 @@ function proml {
     local     MAGENTA="\[\033[0;35m\]"
     local        TEAL="\[\033[0;36m\]"
     local   DARK_GRAY="\[\033[1;30m\]"
-    # END OPTIONAL
     local     DEFAULT="\[\033[0m\]"
     PS1="$RED[\$(date +%H:%M:%S)] $GREEN\u$DEFAULT@$PURPLE\h$DEFAULT:$TEAL\w$LIGHT_RED\$(parse_git_branch)$DEFAULT \$ "
 }
 proml
+
+_myos="$(uname)"
 
 export PATH=$PATH:$HOME/bin:$HOME/local/usr/bin
 
@@ -41,6 +41,22 @@ fi
 if [ -f /Users/$USER/bin/virtualenvwrapper.sh ]; then
 	source /Users/$USER/bin/virtualenvwrapper.sh
 fi
+
+# helpful linux aliases
+alias grep='grep --color'
+case $_myos in
+    Darwin) alias ls='ls -G' ;;
+    Linux) alias ls='ls --color=auto' ;;
+esac
+
+alias ..='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+
+alias hist='history | grep --color'
+
+alias edit='vim'
 
 # virtualenv aliases
 # http://blog.doughellmann.com/2010/01/virtualenvwrapper-tips-and-tricks.html
