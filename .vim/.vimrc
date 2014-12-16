@@ -41,8 +41,8 @@ set nobackup                      " Don't make a backup before overwriting a fil
 set nowritebackup                 " And again.
 set directory=$HOME/.vim/tmp//,.  " Keep swap files in one location
 
-set tabstop=4                    " Global tab width.
-set shiftwidth=4                 " And again, related.
+set tabstop=2                    " Global tab width.
+set shiftwidth=2                 " And again, related.
 set expandtab
 
 set laststatus=2                  " Show the status line all the time
