@@ -2,14 +2,15 @@
 	name = Scott Clark
 	email = scott@scottclark.io
 [alias]
-  st = status
-  ci = commit
-  br = branch
-  co = checkout
-  df = diff
-  dc = diff --cached
-  lg = log -p
-  who = shortlog -s --
+  st   = status
+  ci   = commit
+  br   = branch
+  co   = checkout
+  df   = diff
+  dc   = diff --cached
+  lg   = log -p
+  bm   = checkout origin/master -b
+  who  = shortlog -s --
   lc   = log ORIG_HEAD.. --stat --no-merges
   undo = reset --hard
   fo   = fetch origin
