@@ -105,7 +105,7 @@ c.TerminalIPythonApp.ignore_old_config = False
 # configuration (through profiles), history storage, etc. The default is usually
 # $HOME/.ipython. This options can also be specified through the environment
 # variable IPYTHONDIR.
-c.TerminalIPythonApp.ipython_dir = u'/nail/home/sclark/.ipython'
+c.TerminalIPythonApp.ipython_dir = u'/home/sclark/.ipython'
 
 # Run the module as a script.
 # c.TerminalIPythonApp.module_to_run = ''
