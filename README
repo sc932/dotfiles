@@ -1,1 +1,22 @@
-These are my dotfiles.
+# dotfiles
+
+Scott's dotfiles. `make install` sets everything up on a new machine; `make clean` removes it.
+
+## Terminal logging + unlimited scrollback
+
+`terminal-logging/` records every interactive terminal session (Konsole / SSH / tmux) to
+timestamped text logs under `~/.local/state/terminal-logs/`, makes Konsole scrollback
+unlimited, and runs a daily systemd-user timer that gzips old logs and backs them up to
+R2 (Cloudflare) via blobsync. Read logs with `tlog` (`tlog ls`, `tlog view <file>`, `tlog grep`).
+
+Installed by `make install` (or `make terminal-logging`), which runs
+`terminal-logging/install.sh` — idempotent: copies the files into place, adds the `~/.zshrc`
+source line, sets the Konsole default profile, and enables the timer.
+
+**Secrets are NOT in this repo (it is public).** API keys live in `~/.config/secrets.zsh`
+(`chmod 600`, machine-local, git-free); `~/.zshrc` sources it. Create it by hand on each
+machine. The R2 backup also needs the `r2-personal` rclone remote — see
+`control-surface/docs/blobsync.md`.
+
+Full design notes + restore-from-R2 recipe: the vault's `Meta/Setup.md` →
+"Terminal logging & scrollback".

@@ -1,13 +1,13 @@
 # (C) 2013 Scott Clark
 # Makefile for my dotfiles
-# 
+#
 # To set up a new environment
 # $ make install
 #
 # To clean up an environment
 # $ make clean
 
-install: ipython vim bash git tmux
+install: ipython vim bash git tmux terminal-logging
 
 clean:
 	# ipython
@@ -22,6 +22,11 @@ clean:
 	rm ~/.gitconfig
 	# tmux
 	rm ~/.tmux.conf
+	# terminal-logging
+	-systemctl --user disable --now terminal-logs-rotate.timer 2>/dev/null
+	rm -f ~/.config/terminal-logging.zsh ~/.config/tmux-log.sh ~/.local/bin/tlog-rotate
+	rm -f ~/.config/systemd/user/terminal-logs-rotate.service ~/.config/systemd/user/terminal-logs-rotate.timer
+	rm -f ~/.local/share/konsole/Scott.profile
 
 ipython:
 	cp -r .ipython ~/.ipython
@@ -41,3 +46,6 @@ git:
 
 tmux:
 	cp .tmux.conf ~/.tmux.conf
+
+terminal-logging:
+	bash terminal-logging/install.sh

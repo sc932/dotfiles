@@ -1,0 +1,7 @@
+{
+  "schema": 1,
+  "remote": "r2-personal:vault-blobs",
+  "root": "~/.local/state/terminal-logs",
+  "ignore": ["*.log"],
+  "files": {}
+}

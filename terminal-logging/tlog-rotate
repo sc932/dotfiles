@@ -1,0 +1,44 @@
+#!/usr/bin/env bash
+# Daily housekeeping for terminal logs. Run by the systemd user timer
+# terminal-logs-rotate.timer. See ~/dev/vault/Meta/Setup.md.
+#
+#   1) gzip closed logs older than ~2 days (skips any file a live session holds open)
+#   2) blobsync push -> R2 (manifest ignores raw *.log, so only immutable .gz upload)
+#   3) copy the manifest itself to R2 so the backup is restorable after disk loss
+#
+# Best-effort: failures are logged to the journal (visible in `systemctl --user
+# status`) but never fail the timer — a network blip shouldn't turn it red.
+# Check backup health any time with:  journalctl --user -u terminal-logs-rotate
+set -u
+# systemd --user PATH does NOT include ~/.local/bin, where blobsync lives.
+export PATH="$HOME/.local/bin:$PATH"
+
+base="${TLOG_DIR:-$HOME/.local/state/terminal-logs}"
+manifest="$base/.blobmanifest.json"
+[ -d "$base" ] || exit 0
+
+# 1) gzip old, CLOSED logs (never touch a file a running session still has open)
+while IFS= read -r -d '' f; do
+  if command -v fuser >/dev/null 2>&1 && fuser "$f" >/dev/null 2>&1; then
+    continue
+  fi
+  gzip -q "$f" 2>/dev/null || true
+done < <(find "$base" -type f -name '*.log' -mtime +1 -print0 2>/dev/null)
+
+# 2) push the gzipped (immutable) logs to R2
+if command -v blobsync >/dev/null 2>&1 && [ -f "$manifest" ]; then
+  blobsync push --manifest "$manifest" >/dev/null 2>&1 \
+    || echo "tlog-rotate: blobsync push failed (non-fatal)" >&2
+fi
+
+# 3) stash the manifest in R2 too, so the backup is self-restorable after disk loss
+if [ -f "$manifest" ] && command -v rclone >/dev/null 2>&1; then
+  remote="$(sed -n 's/.*"remote"[[:space:]]*:[[:space:]]*"\([^"]*\)".*/\1/p' "$manifest" | head -1)"
+  host="$(hostname -s 2>/dev/null || hostname)"
+  if [ -n "$remote" ]; then
+    rclone copyto "$manifest" "$remote/manifests/terminal-logs-$host.json" \
+      --low-level-retries 10 --retries 3 >/dev/null 2>&1 \
+      || echo "tlog-rotate: rclone manifest copy failed (non-fatal)" >&2
+  fi
+fi
+exit 0

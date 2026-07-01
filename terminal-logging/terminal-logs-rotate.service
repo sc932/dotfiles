@@ -1,0 +1,8 @@
+[Unit]
+Description=Rotate (gzip) and back up terminal logs to R2
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/tlog-rotate
+Nice=10
+IOSchedulingClass=idle
