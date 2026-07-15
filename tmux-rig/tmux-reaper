@@ -1,0 +1,104 @@
+#!/usr/bin/env bash
+# tmux-reaper — keep the standing tmux rig un-wedgeable (runs via tmux-reaper.timer, ~2 min).
+#
+# Mechanism it guards against (5090 wedges of 2026-07-13 and 2026-07-15; vault
+# Meta/Setup § Remote / travel rig): an iTerm2 `tmux -CC` client whose ssh transport
+# dies undrained (laptop lid close — the sleeping client can't close its own
+# connection) stops emptying its pty; the single-threaded tmux server blocks in a tty
+# write/drain wait within seconds and never returns to its event loop — no accepts
+# (`tmux ls` hangs), no pane I/O. Observed 2026-07-15: the pty hangup at sshd death
+# does NOT wake the wait, killing the stuck clients does NOT wake it, and a caught
+# signal wakes it into stale state it dies on (SIGCHLD → server exit). A wedged server
+# is therefore treated as LOST. Panes die with it; claude sessions resume from
+# ~/.claude/projects transcripts (`claude --resume`), scrollback survives in the tlog
+# pane logs — bounded loss, versus a rig frozen until a human digs it out.
+#
+# Ladder (each rung only if the previous didn't clear it):
+#   0. server missing while tmux-rig.service is active -> restart the rig.
+#      (Tear the rig down with `systemctl --user stop tmux-rig`, never a bare
+#      `tmux kill-server` — the reaper restores what the unit declares.)
+#   1. kill any orphaned client: comm "tmux: client" with PPID 1 — always garbage
+#      (a live client's parent is its shell/sshd; clients hold no state).
+#   2. probe `tmux ls` 3x over ~70 s; on persistent failure kill ALL "tmux: client"
+#      processes (clients are attach handles; sessions/panes live in the server).
+#   3. still unresponsive -> forensics to the log, kill the server, restart the rig,
+#      drop a breadcrumb comment into each fresh pane.
+#
+# Flags: REAPER_DRYRUN=1    log intended actions, touch nothing.
+#        REAPER_FORCE_FAIL=1  treat every probe as failed (drill the ladder);
+#                             refused unless DRYRUN is also set.
+# Log: ~/.local/state/tmux-reaper.log (healthy runs are silent).
+set -u
+LOG="$HOME/.local/state/tmux-reaper.log"
+mkdir -p "$(dirname "$LOG")"
+note() { printf '%s %s\n' "$(date '+%F %T')" "$*" >> "$LOG"; }
+dry() { [ "${REAPER_DRYRUN:-0}" = "1" ]; }
+
+if [ "${REAPER_FORCE_FAIL:-0}" = "1" ] && ! dry; then
+  note "REAPER_FORCE_FAIL without REAPER_DRYRUN refused (would purge a healthy rig)"
+  exit 2
+fi
+
+zap() { # zap <pid> <why> — kill -9 with ps proof in the log
+  local pid="$1" why="$2" line
+  line="$(ps -o pid=,ppid=,stat=,etime=,args= -p "$pid" 2>/dev/null)" || return 0
+  if dry; then note "DRYRUN would kill -9 ($why): $line"; return 0; fi
+  note "kill -9 ($why): $line"
+  kill -9 "$pid" 2>/dev/null || true
+}
+
+clients() { ps -eo pid=,ppid=,comm= | awk '$3=="tmux:" && $4=="client" {print $1" "$2}'; }
+server_pids() { ps -eo pid=,comm= | awk '$2=="tmux:" && $3=="server" {print $1}'; }
+probe() {
+  [ "${REAPER_FORCE_FAIL:-0}" = "1" ] && return 1
+  timeout -k 2 4 tmux ls >/dev/null 2>&1
+}
+
+restart_rig() {
+  if dry; then note "DRYRUN would systemctl --user restart tmux-rig.service"; return 0; fi
+  systemctl --user restart tmux-rig.service >> "$LOG" 2>&1
+  sleep 3
+  if timeout -k 2 4 tmux ls >/dev/null 2>&1; then
+    note "rig restarted OK: $(tmux ls 2>/dev/null | tr '\n' ' ')"
+    for s in $(tmux list-sessions -F '#S' 2>/dev/null); do
+      tmux send-keys -t "$s" "# tmux-reaper auto-recovered the rig $(date '+%F %H:%M') — log: ~/.local/state/tmux-reaper.log; resume claude: claude --resume" Enter 2>/dev/null || true
+    done
+  else
+    note "rig restart FAILED — human needed (systemctl --user status tmux-rig)"
+  fi
+}
+
+# rung 1 — orphaned clients (cheap, correct even when no server exists)
+while read -r pid ppid; do
+  [ "$ppid" = "1" ] && zap "$pid" "orphaned client"
+done < <(clients)
+
+# rung 0 — server gone but the unit says the rig should be up (self-death, OOM, crash)
+if ! ps -eo comm= | grep -qx 'tmux: server'; then
+  if systemctl --user is-active --quiet tmux-rig.service; then
+    note "no tmux server but tmux-rig.service is active — restarting rig"
+    restart_rig
+  fi
+  exit 0
+fi
+
+probe && exit 0
+sleep 5
+probe && exit 0
+sleep 60
+probe && exit 0
+
+note "server unresponsive to 3 probes over ~70s — rung 2: purging all clients"
+while read -r pid ppid; do
+  zap "$pid" "client purge under wedged server"
+done < <(clients)
+sleep 3
+if probe; then note "recovered by client purge"; exit 0; fi
+
+note "rung 3: server is lost — forensics, then restart"
+ps -eo pid,ppid,stat,wchan:24,etime,args | grep -E '[t]mux' >> "$LOG" 2>/dev/null
+for spid in $(server_pids); do
+  zap "$spid" "wedged server"
+done
+sleep 2
+restart_rig

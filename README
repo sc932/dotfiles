@@ -20,3 +20,15 @@ machine. The R2 backup also needs the `r2-personal` rclone remote — see
 
 Full design notes + restore-from-R2 recipe: the vault's `Meta/Setup.md` →
 "Terminal logging & scrollback".
+
+## tmux travel rig + reaper watchdog
+
+`tmux-rig/` keeps four standing tmux work sessions (vault / talaria / tauopt / ops)
+alive from boot (`tmux-rig.service` + loginctl linger) and un-wedgeable
+(`tmux-reaper.timer`, every 2 min): it reaps orphaned `tmux -CC` clients left behind
+by dead ssh transports (the laptop-lid wedges of 2026-07-13/15) and, when the server
+stops answering, escalates client purge → rig restart (claude sessions resume from
+their transcripts; scrollback is already in the terminal logs). Installed by
+`make install` (or `make tmux-rig`) via `tmux-rig/install.sh`. Tear the rig down with
+`systemctl --user stop tmux-rig` — a bare `tmux kill-server` gets auto-restored.
+Wedge post-mortems + doctrine: the vault's `Meta/Setup.md` → "Remote / travel rig".

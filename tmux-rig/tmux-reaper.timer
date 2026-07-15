@@ -1,0 +1,10 @@
+[Unit]
+Description=Run tmux-reaper every 2 minutes (wedge watchdog for the tmux rig)
+
+[Timer]
+OnBootSec=90
+OnUnitActiveSec=120
+AccuracySec=30
+
+[Install]
+WantedBy=timers.target

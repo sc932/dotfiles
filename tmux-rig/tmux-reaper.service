@@ -1,0 +1,8 @@
+[Unit]
+Description=tmux rig reaper — unwedge or restart the standing sessions (vault Meta/Setup § Remote / travel rig)
+
+[Service]
+Type=oneshot
+# same PATH note as tmux-rig.service: the lingering user manager has no ~/.local/bin
+Environment=PATH=%h/.local/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=%h/.local/bin/tmux-reaper

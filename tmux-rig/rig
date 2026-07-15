@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# rig — ensure the standing tmux work sessions exist (idempotent). Travel-rig entry point:
+# boot runs it via the tmux-rig.service user unit (linger on); safe to run manually any
+# time. Full cold restart while the unit is active: `systemctl --user restart tmux-rig`
+# (a bare rig after kill-server would put the new server outside the unit's cgroup).
+# ALL sessions start in ~/dev/vault (session-root ruling 2026-07-12: the vault carries
+# the operating contract + hooks; sibling repos are cd targets, never session roots).
+# Attach (plain):  tmux attach -d -t vault    (iTerm2 native): ssh 5090 -t 'tmux -CC new -A -D -s vault'
+# Docs: vault Meta/Setup § Remote / travel rig.
+set -euo pipefail
+new() { tmux has-session -t "=$1" 2>/dev/null || tmux new-session -d -s "$1" -c "$HOME/dev/vault"; }
+new vault
+new talaria
+new tauopt
+new ops
+tmux ls
