@@ -56,6 +56,7 @@ git:
 
 tmux:
 	cp .tmux.conf ~/.tmux.conf
+	install -m 0755 tmux-yank.sh ~/.config/tmux-yank.sh
 
 terminal-logging:
 	bash terminal-logging/install.sh
